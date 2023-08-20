@@ -1,0 +1,194 @@
+<!doctype html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>spacestimate</title>
+	<link rel=" icon" href="images/mask.png" type="image/icon type"> 
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script src="js/mobile.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div>
+				<a href="index.html" class="logo"><img src="images/mask.png" alt=""></a>
+				<ul id="navigation">
+					<li class="selected">
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="projects.html">Projects</a>
+					</li>
+					<li>
+						<a href="blog.html">Blog</a>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="body">
+			<div class="header">
+				<div>
+					<h1>SPACESTIMATES</h1>
+					<ul>
+						<li>
+							<a><img src="images/round venus.jpg" id="photo" class="venus" alt=""></a>
+							<div>
+								<h1>SPEED OF LIGHT FROM VENUS TO EARTH </h1>
+								<p> At its average distance of 42.2 million miles, light takes 3 minutes 46 seconds to reach Earth from Venus. As the planets
+									orbit the sun that time varies between 2 minutes 13 seconds and 14 minutes 29 seconds.
+									When you look up at Venus with your telescope, you’re seeing the planet as it was at least two minutes and 13 seconds ago 
+									and perhaps as long as a quarter of an hour ago!<br>
+								</p>
+							</div>
+						</li>
+						<li>
+							<a><img src="images/space-station.jpg" id="photo" alt=""></a>
+							<div>
+								<h1>INTERTERNATIONAL SPACE STATION</h1>
+								<p>  The space station orbits Earth at an altitude of approximately 250 miles (402 kilometers), with its orbital path taking
+									 it over 90 percent of the Earth's population. Thanks to the size of its solar panels, it can be seen with the naked eye 
+									 at dusk or dawn when flying over a local area. You can track the space station's path near you at <a href="https://spotthestation.nasa.gov.">spotthestation.nasa.gov.</a> </p>
+							
+							</div>
+						</li>
+						<li>
+							<a><img src="images/spacecraft.jpg" id="photo" alt=""></a>
+							<div>
+								<h1>SPACECRAFT DURATION FROM EARTH TO VENUS</h1>
+								<p> The shortest time a spacecraft has taken to get to Venus from Earth is 109 days, or 3.5 months. The longest journey took 
+									198 days or 6.5 months. Most journeys take between 120 and 130 days which is about 4 months.</p>
+							
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+        <div class="estimate">
+			<div class="launch">
+				<h1>Launch cost refers to the cost of sending a payload from the ground to outer space,specially low earth orbit </h1>
+				<h2>Estimated launch cost per KG today is 5,000 - 10,000USD   </h2>
+		        <div class="input">
+					<div class="flex">
+						<ul>
+							<li><h5>Object weight in kg :</h5>
+							<input id="weight" class="form-control"></p></li>
+							<li><h5>cost per kg :</h5>
+							<input id="price1" class="form-control" placeholder="$5000 - $10000"></p></li>
+						</ul>
+					</div>
+					<p><button onclick="fun()">check cost</button></p>
+					<p id="res" style="display:none">
+						Total cost in USD <input id="total1"  class="control"><br>
+					</p>
+				</div>
+			</div>
+			<div class="launch">
+				<h1>Space tourist cost refers to the cost of sending an individual(tourist) from the ground to outer space </h1>
+				<h2>Estimated space tour cost per tourist today is 200,000USD - 300,000USD </h2>
+		        <div class="input">
+					<div class="flex">
+						<ul>
+							<li><h5>Number of tourist :</h5> 
+							<input id="tourist" class="form-control"></p></li>
+							<li><h5>cost per tourist : </h5>
+							<input id="price2" class="form-control" placeholder="$200,000 - $300,000"></p></li>
+						</ul>
+					</div>
+					<p><button onclick="check()">check cost</button></p>
+					<p id="result" style="display:none">
+						 Total cost in USD <input id="total2"  class="control"><br>
+					</p>
+				</div>
+			</div>
+			<div class="launch">
+				<h1>Low Earth orbit(LEO) as the name suggests, is an orbit that is relatively close to Earth </h1>
+				<h2>Estimated distance from Earth to Low Earth orbit (LEO) is 160km to as high as 1000km </h2>
+		        <h2>Estimated speed required from a rocket to achieve LEO is 28,000km/hr</h2>
+				<div class="input">
+					<div class="flex">
+							<h5>LEO distance in KM : </h5>
+							<input id="distance" class="form-control" placeholder="160km - 1,000km"></p>
+					</div>
+					<p><button onclick="out()">period</button></p>
+					<p id="outcome" style="display:none">
+                    <input id="period" style="display:none" class="control"><br>
+						 Arrival time in seconds <input id="outco"  class="control"><br>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="connect">
+				<div>
+					<h1>FOLLOW OUR  MISSIONS ON</h1>
+					<div>
+						<a href="" class="facebook">facebook</a>
+						<a href="https://twitter.com/spacestimate" class="twitter">twitter</a>
+					</div>
+				</div>
+			</div>
+			<div class="footnote">
+				<div>
+					<p>&copy; 2023 SPACESTIMATE | ALL RIGHTS RESERVED</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var numOne, numTwo, res, temp;
+        function fun(){
+		numOne = parseInt(document.getElementById("price1").value);
+        numTwo = parseInt(document.getElementById("weight").value);
+        if(numOne && numTwo )
+        {
+        temp = document.getElementById("res");
+        temp.style.display = "block";
+        res = numOne * numTwo;
+        document.getElementById("total1").value = res;
+        }
+        }
+
+		var One, Two, result, temp;
+        function check(){
+		One = parseInt(document.getElementById("price2").value); 
+        Two = parseInt(document.getElementById("tourist").value);   
+
+        if(One && Two )
+        {
+        temp = document.getElementById("result");
+        temp.style.display = "block";
+        result = One * Two;
+        document.getElementById("total2").value = result;
+        }
+        }
+
+		var ist, second, third, outcome, temp;
+        function out(){
+		ist = parseInt("28000"); 
+        second = parseInt(document.getElementById("distance").value); 
+		third =  parseInt("3600");   
+
+        if(ist && second && third )
+        {
+        temp = document.getElementById("outcome");
+        temp.style.display = "block";
+        outcome = second / ist;
+        document.getElementById("period").value = outcome;
+		outcome = third * (document.getElementById("period").value);
+        }
+		document.getElementById("outco").value = outcome;
+        }
+
+    </script>
+</body>
+</html>
